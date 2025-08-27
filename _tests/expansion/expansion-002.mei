@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1">
+<mei xml:id="mo9vwt8" meiversion="5.1" xmlns="http://www.music-encoding.org/ns/mei">
    <meiHead xml:id="meosntr">
       <fileDesc xml:id="fpse63">
          <titleStmt xml:id="t1rbrmhv">
-            <title>Expand and compress</title>
-            <respStmt>
-               <persName role="composer">Werner Goebl</persName>
-            </respStmt>
+            <title xml:id="tcxewkv1">Expand and compress</title>
          </titleStmt>
          <pubStmt xml:id="po49b18">
-            <date isodate="2025-02-27" type="encoding-date">2025-02-27</date>
+            <respStmt xml:id="rvyf06z1">
+               <persName xml:id="ph3cjem1" role="composer">Werner Goebl</persName>
+            </respStmt>
+            <date xml:id="dbsuhks1" isodate="2025-02-27" type="encoding-date">2025-02-27</date>
+            <pubPlace xml:id="pwggg5d1">
+               <ref xml:id="rdlkkgp1" target="https://github.com/rism-digital/verovio/pull/3972"/>
+            </pubPlace>
          </pubStmt>
+         <seriesStmt xml:id="srwb2k61">
+            <title xml:id="thl8uaj1">Verovio test suite</title>
+         </seriesStmt>
+         <notesStmt xml:id="n3atgny2">
+            <annot xml:id="a98u7kf">Verovio supports "expansion" @plist versions that reorder the original section structure.</annot>
+         </notesStmt>
       </fileDesc>
       <encodingDesc xml:id="e157ayih">
          <appInfo xml:id="amae9l6">
-            <application xml:id="aabwu1m" isodate="2025-02-27T16:29:44" version="5.1.0-dev-f094ea4">
-               <name xml:id="n1ad5af1">Verovio</name>
-               <p xml:id="p35a9cv">Transcoded from MusicXML</p>
+            <application xml:id="a6defjg1" label="2" version="5.2.0">
+               <name xml:id="ni7r92l1">Verovio</name>
             </application>
-            <application xml:id="anpom9i1" enddate="2025-02-27T16:47:40" startdate="2025-02-27T16:36:07" version="1.2.2">
+            <application xml:id="anpom9i1" enddate="2025-08-27T14:24:22" startdate="2025-02-27T16:36:07" version="1.2.8">
                <name xml:id="nj3oz5r2">mei-friend</name>
                <p xml:id="powkzbn1">First edit by mei-friend 1.2.2, 20 February 2025.</p>
             </application>
@@ -33,13 +41,10 @@
             <score xml:id="stsnibj">
                <scoreDef xml:id="s1w44lue">
                   <pgHead xml:id="pjundqt">
-                     <rend xml:id="r1mxkyek" halign="center" valign="top">Expand and Compress</rend>
                   </pgHead>
                   <staffGrp xml:id="smj7qxq">
                      <staffGrp xml:id="P1" bar.thru="true">
                         <grpSym xml:id="gi0eifw" symbol="brace"/>
-                        <label xml:id="l1jcyk11">Klavier</label>
-                        <labelAbbr xml:id="l1v49fkz">Klav.</labelAbbr>
                         <instrDef xml:id="iqz7211" midi.channel="0" midi.instrnum="0" midi.volume="78%"/>
                         <staffDef xml:id="s12rtw4c" lines="5" n="1" ppq="1">
                            <clef xml:id="c156fhx1" line="2" shape="G"/>
@@ -58,7 +63,7 @@
                   <expansion xml:id="minimal" plist="#Upbeat #A #A2 #B #A #A-Fine"/>
                   <expansion xml:id="default" plist="#Upbeat #A #A1 #A #A2 #B #A #A-Fine"/>
                   <expansion xml:id="unsorted" plist="#Upbeat #B #A #A1 #A #A-Fine"/>
-                  <expansion xml:id="error-test" />
+                  <expansion xml:id="test-no-plist"/>
                   <section xml:id="Upbeat">
                      <measure xml:id="m1bg2ywy" n="0">
                         <staff xml:id="sxx5e47" n="1">
@@ -72,9 +77,10 @@
                            </layer>
                         </staff>
                         <tempo xml:id="t10kixzj" midi.bpm="240" mm="80" mm.dots="1" mm.unit="2" place="above" staff="1" tstamp="1">
-                           <rend xml:id="rujxk44" glyph.auth="smufl"></rend> = 80</tempo>
+                           <rend xml:id="rujxk44" glyph.auth="smufl"></rend> = 80
+                        </tempo>
                         <dir xml:id="deeoqyb" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="rtrbg7h" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold" halign="center">Upbeat</rend>
+                           <rend xml:id="rtrbg7h" color="red" fontsize="larger" fontstyle="normal" fontweight="bold" halign="center">Upbeat</rend>
                         </dir>
                      </measure>
                   </section>
@@ -103,7 +109,7 @@
                            <rend xml:id="rafb6g6" fontstyle="normal" glyph.auth="smufl" halign="center">𝄋</rend>
                         </dir>
                         <dir xml:id="deeok1b" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="r1tg1md1" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold">A</rend>
+                           <rend xml:id="r1tg1md1" color="red" fontsize="larger" fontstyle="normal" fontweight="bold">A</rend>
                         </dir>
                      </measure>
                      <measure xml:id="m1jv8zpt" n="2">
@@ -171,7 +177,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="deeqkyb" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="riwdivq2" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold">A1</rend>
+                           <rend xml:id="riwdivq2" color="red" fontsize="larger" fontstyle="normal" fontweight="bold">A1</rend>
                         </dir>
                      </measure>
                   </ending>
@@ -197,7 +203,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="dweokyb" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="r1dbbtm1" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold">A2</rend>
+                           <rend xml:id="r1dbbtm1" color="red" fontsize="larger" fontstyle="normal" fontweight="bold">A2</rend>
                         </dir>
                      </measure>
                   </ending>
@@ -218,7 +224,7 @@
                            </layer>
                         </staff>
                         <dir xml:id="deewkyb" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="r8jhuwc" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold">A-Fine</rend>
+                           <rend xml:id="r8jhuwc" color="red" fontsize="larger" fontstyle="normal" fontweight="bold">A-Fine</rend>
                         </dir>
                      </measure>
                   </ending>
@@ -243,8 +249,8 @@
                               </chord>
                            </layer>
                         </staff>
-                        <dir xml:id="deeokyb" place="below" staff="1" tstamp="1" vgrp="2">
-                           <rend xml:id="rnjmn9d" color="deeppink" fontsize="larger" fontstyle="normal" fontweight="bold">B</rend>
+                        <dir xml:id="deeokyb" place="below" staff="1" tstamp="1">
+                           <rend xml:id="rnjmn9d" color="red" fontsize="larger" fontstyle="normal" fontweight="bold">B</rend>
                         </dir>
                      </measure>
                      <measure xml:id="m1hhjjqg" n="8">
